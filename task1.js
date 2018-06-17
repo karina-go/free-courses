@@ -7,7 +7,7 @@
  */
 function isPalindrome(sentence) {
   const letters = sentence
-    .replace(/^w+/g,'') // оставляем только буквы
+    .replace(/[^\w]+/g,'') // оставляем только буквы
     .toLowerCase() // приводим к нижнему регистру
 
   // В целях эффективности двигаемся по массиву с разных концов в центр,
